@@ -55,7 +55,7 @@ def generateKeyMatrix(key):
         for j in range(0, 5):
             matrix_5x5[i][j] = simpleKeyArr[index]
             index += 1
-
+    print("matrix 5x5",matrix_5x5)
     return matrix_5x5
 
 
@@ -112,6 +112,7 @@ def encryption(plainText, key):
         #   (n1[0]+1 % 5,n1[1])
         #   (n2[0]+1 % 5,n2[1])
 
+        #Same column case
         if n1[1] == n2[1]:
             i1 = (n1[0] + 1) % 5
             j1 = n1[1]
@@ -148,6 +149,7 @@ def encryption(plainText, key):
             cipherText.append(",")
 
         i += 2
+    print("Cipher text",cipherText)
     return cipherText
 
 
