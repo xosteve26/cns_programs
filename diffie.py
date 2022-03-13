@@ -6,7 +6,7 @@ def verification(Ka, Kb):
 
 
 def calculation(alpha, XA, XB, q):
-    # compute public keys
+    # Compute public keys
     YA = (alpha ** XA) % q
     YB = (alpha ** XB) % q
     # Public keys are shared between both parties and secret keys Ka,Kb are computed
