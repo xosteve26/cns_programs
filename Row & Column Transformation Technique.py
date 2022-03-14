@@ -16,18 +16,18 @@ def transform(matrix,s,col_limit):
 def encryption(matrix,row_limit,col_limit):
     c=0
     r=0
-    res=''
+    cipher=''
     l=0
     while l <row_limit*col_limit:
-        res+=matrix[r][c]
+        cipher+=matrix[r][c]
         r+=1
         if r == row_limit:
             r=0
             c+=1
         l+=1
-    return res
+    return cipher
 
-def decryption(matrix,):
+def decryption(matrix):
 
     decypher=''
     for i in matrix:
@@ -48,15 +48,5 @@ def main():
     print(dec)
 
     
-
-    
-
-        
-
-
-
-    
-
-
 if __name__ == '__main__':
     main()
