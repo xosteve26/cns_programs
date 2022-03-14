@@ -15,6 +15,7 @@ def calculation(alpha, XA, XB, q):
     return KA, KB
 
 
+
 def main():
     XA = int(input("Enter XA: "))
     XB = int(input("Enter XB: "))
