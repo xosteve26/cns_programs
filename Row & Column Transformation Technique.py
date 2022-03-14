@@ -13,7 +13,27 @@ def transform(matrix,s,col_limit):
         col+=1
     return matrix
         
+def encryption(matrix,row_limit,col_limit):
+    c=0
+    r=0
+    res=''
+    l=0
+    while l <row_limit*col_limit:
+        res+=matrix[r][c]
+        r+=1
+        if r == row_limit:
+            r=0
+            c+=1
+        l+=1
+    return res
 
+def decryption(matrix,):
+
+    decypher=''
+    for i in matrix:
+        decypher+=''.join(i)
+
+    return decypher
 
 def main():
     s = 'helloworld'
@@ -21,19 +41,15 @@ def main():
     col_limit=4
     matrix = [[" " for i in range(col_limit)]for j in range(row_limit)]
     result=transform(matrix,s,col_limit)
-    c=0
-    r=0
-    res=''
-    l=0
-    while l <row_limit*4:
-        res+=result[r][c]
-        r+=1
-        if r == row_limit:
-            r=0
-            c+=1
-        l+=1
+    print(result)
+    enc=encryption(result,row_limit,col_limit)
+    dec=decryption(matrix)
+    print(enc.replace(' ',''))
+    print(dec)
 
-    print(res.replace(' ',''))
+    
+
+    
 
         
 
